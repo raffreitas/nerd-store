@@ -22,11 +22,11 @@ public class AuthController : MainController
     public AuthController(
         SignInManager<IdentityUser> signInManager,
         UserManager<IdentityUser> userManager,
-        IOptions<JwtSettings> jwtSettigns)
+        IOptions<JwtSettings> jwtSettings)
     {
         _signInManager = signInManager;
         _userManager = userManager;
-        _jwtSettings = jwtSettigns.Value;
+        _jwtSettings = jwtSettings.Value;
     }
 
     [HttpPost("new-account")]
